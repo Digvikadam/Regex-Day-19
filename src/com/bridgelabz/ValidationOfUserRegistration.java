@@ -39,7 +39,7 @@ public class ValidationOfUserRegistration {
      * @param emailId
      */
     public void validateEmailId(String emailId) {
-        String regex = "^[A-Za-z0-9-._]+@+[a-z]+.[a-z]+$";
+        String regex = "^[A-Za-z0-9-+._]+@[a-z0-9]+(.[a-z]{2,3})+$";
         System.out.println(emailId.matches(regex));
     }
 
