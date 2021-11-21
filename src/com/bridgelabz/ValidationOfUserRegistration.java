@@ -53,8 +53,15 @@ public class ValidationOfUserRegistration {
      * this method is to check whether password has 8 or more characters
      * @param password
      */
-    public void validatePasswordRuleOne(String password){
+    public boolean validatePasswordRuleOne(String password){
         String regex = "^[A-Za-z0-9.-_@#$%&^*()+:?]{8,}$";
-        System.out.println(password.matches(regex));
+        return (password.matches(regex));
+    }
+    public void validatePassword(String password){
+
+    }
+    public boolean validatePasswordRuleTwo(String password){
+        String regex = "^(?=.*[A-Z])[A-Za-z0-9._@#$%&^*()+:?]{8,}$";
+        return (password.matches(regex));
     }
 }
