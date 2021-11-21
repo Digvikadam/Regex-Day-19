@@ -63,10 +63,6 @@ public class ValidationOfUserRegistration {
         return (password.matches(regex));
     }
 
-    public void validatePassword(String password) {
-
-    }
-
     public boolean validatePasswordRuleTwo(String password) {
         String regex = "^(?=.*[A-Z])[A-Za-z0-9._@#$%&^*()+:?]{8,}$";
         return (password.matches(regex));
@@ -74,6 +70,10 @@ public class ValidationOfUserRegistration {
 
     public boolean validatePasswordRuleThree(String password) {
         String regex = "^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9._@#$%&^*()+:?]{8,}$";
+        return (password.matches(regex));
+    }
+    public boolean validatePasswordRuleFour(String password) {
+        String regex = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[._@#$%&^*()+:?])[A-Za-z0-9._@#$%&^*()+:?]{8,}$";
         return (password.matches(regex));
     }
 }
